@@ -1,0 +1,8 @@
+﻿<h1>Olá {{currentUser.firstName}}!</h1>
+<h3>Usuarios Registrados:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Excluir</a>
+    </li>
+</ul>
